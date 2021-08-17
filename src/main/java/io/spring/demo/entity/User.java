@@ -16,7 +16,9 @@
 
 package io.spring.demo.entity;
 
-public class User {
+public class User extends EntityType {
+	private static String USER_TYPE = "user";
+
 	private int id;
 
 	private String firstName;
@@ -26,6 +28,7 @@ public class User {
 	private int planId;
 
 	public User(int id, String firstName, String lastName, int planId) {
+		super(USER_TYPE);
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;

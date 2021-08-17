@@ -16,13 +16,16 @@
 
 package io.spring.demo.entity;
 
-public class Plan {
+public class Plan extends EntityType{
+
+	public static String PLAN_TYPE = "plan";
 	private int planId;
 	private String planName;
 	private double dataPrice;
 	private double callPrice;
 
 	public Plan(int planId, String planName, double dataPrice, double callPrice) {
+		super(PLAN_TYPE);
 		this.planId = planId;
 		this.planName = planName;
 		this.dataPrice = dataPrice;
